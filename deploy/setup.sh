@@ -8,7 +8,7 @@ PROJECT_GIT_URL='https://github.com/chingfo777/profiles-rest-api.git'
 PROJECT_BASE_PATH='/usr/local/apps/profiles-rest-api'
 
 # Set Ubuntu Language
-locale-gen en_GB.UTF-8
+#locale-gen en_GB.UTF-8
 
 # Install Python, SQLite and pip
 #echo "Installing dependencies..."
@@ -21,7 +21,7 @@ locale-gen en_GB.UTF-8
 
 # Set up virtual environment and install dependencies
 #python3 -m venv $PROJECT_BASE_PATH/env
-$PROJECT_BASE_PATH/env/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt uwsgi==2.0.21
+#$PROJECT_BASE_PATH/env/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt uwsgi==2.0.21
 
 # Run migrations
 $PROJECT_BASE_PATH/env/bin/python $PROJECT_BASE_PATH/manage.py migrate
