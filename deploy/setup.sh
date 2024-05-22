@@ -15,7 +15,7 @@ locale-gen en_GB.UTF-8
 # Update and install necessary packages
 echo "Updating package list and installing dependencies..."
 sudo apt-get update
-sudo apt-get install -y python3-dev python3-venv python3-pip nginx supervisor git
+sudo apt-get install -y python3-dev python3-venv python3-pip nginx supervisor git tzdata
 
 # Create project directory and clone the repository
 echo "Creating project directory and cloning repository..."
@@ -27,8 +27,8 @@ echo "Setting up virtual environment and installing dependencies..."
 python3 -m venv $VENV_PATH
 source $VENV_PATH/bin/activate
 pip install --upgrade pip
-pip install -r $PROJECT_BASE_PATH/requirements.txt
 pip install uwsgi
+pip install Django==3.2.25 djangorestframework==3.15.1 importlib-resources==5.4.0 pytz==2024.1 sqlparse==0.4.4 typing-extensions==4.1.1 zipp==3.6.0
 
 # Run Django migrations
 echo "Running Django migrations..."
